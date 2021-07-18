@@ -218,7 +218,7 @@ def open_about_menu(screen: pygame.Surface) -> None:
     """Show an about menu with web url."""
     # Write text
     utilities.display_header(screen, 'ABOUT')
-    utilities.display_options(screen, ['github.com/karsteneconomou/pong-clone'])
+    utilities.display_options(screen, ['github.com/KarstenEconomou/pong-clone'])
     show_menu()
 
     @loop
@@ -226,7 +226,7 @@ def open_about_menu(screen: pygame.Surface) -> None:
         """Check for specific user input."""
         keys = pygame.key.get_pressed()
         if keys[pygame.K_1]:
-            open('https://github.com/karsteneconomou', new=2)
+            open('https://github.com/KarstenEconomou/pong-clone', new=2)
     request_input()
 
 
