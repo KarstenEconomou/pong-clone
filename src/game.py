@@ -132,12 +132,15 @@ def start_point(screen: pygame.Surface, scores: dict) -> None:
     utilities.play_sound('start')
     pygame.time.wait(constants.WAIT_TIME)
 
+    clock = pygame.time.Clock()
+
     global rally_length
     rally_length = 0
 
     @loop
     def game() -> None:
         draw_screen(screen, sprite_group)
+        clock.tick(constants.FPS)
 
         # Move paddles
         keys = pygame.key.get_pressed()
@@ -170,17 +173,6 @@ def start_point(screen: pygame.Surface, scores: dict) -> None:
     game()
 
 
-def create_game(screen: pygame.Surface):
-    """Begin clock and start the first point of the game."""
-    def initialize_clock() -> None:
-        """Define the game clock."""
-        clock = pygame.time.Clock()
-        clock.tick(constants.FPS)
-
-    initialize_clock()
-    start_point(screen, {'left': 0, 'right': 0})
-
-
 def open_difficulty_select_menu(screen: pygame.Surface) -> None:
     """Create a difficulty selection menu and capture input."""
     # Write text
@@ -196,10 +188,10 @@ def open_difficulty_select_menu(screen: pygame.Surface) -> None:
         keys = pygame.key.get_pressed()
         if keys[pygame.K_1]:
             difficulty = 1
-            create_game(screen)
+            start_point(screen, {'left': 0, 'right': 0})
         elif keys[pygame.K_2]:
             difficulty = 2
-            create_game(screen)
+            start_point(screen, {'left': 0, 'right': 0})
     request_input()
 
 
