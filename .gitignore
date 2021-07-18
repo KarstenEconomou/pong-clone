@@ -1,0 +1,12 @@
+/venv/
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+bin/
+.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
