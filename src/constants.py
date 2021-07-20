@@ -1,5 +1,4 @@
 """Contains constants."""
-
 TITLE = 'PONG CLONE'
 
 COLOR_BG = (45, 45, 45)

@@ -15,7 +15,7 @@ Two difficulty settings are available to be picked when choosing to play a game:
 
 * Standard: The standard game experience.
 
-* Nadal on clay: A more difficult game experience where ball and paddle speeds are increased.
+* [Nadal on clay](https://en.wikipedia.org/wiki/Rafael_Nadal_career_statistics#Historic_achievements): A higher-speed game experience with increased ball and paddle speeds.
 
 ### Controls
 Controls (also documented in-game) are:
